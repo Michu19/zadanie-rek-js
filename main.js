@@ -11,7 +11,7 @@ async function fetchData() {
     let peopleList = document.querySelector('ul');
 
 
-    for(let i = 0; i < data.results.length; i++) {
+    data.results.forEach((e, i) => {
 
         let people = document.createElement('li');
         let image = document.createElement('img');
@@ -26,10 +26,9 @@ async function fetchData() {
 
         item.appendChild(image);
         item.appendChild(people);
-
         peopleList.appendChild(item);
 
-    }
+    })
 
 }
 fetchData();
