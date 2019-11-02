@@ -5,7 +5,6 @@ const images = ['./img/Luke.jpg', './img/C-3PO.png', './img/r2d2.jpg', './img/Da
 async function fetchData() {
     const response = await fetch('https://swapi.co/api/people/')
     const data = await response.json()
-    console.log(data);
 
 
     let peopleList = document.querySelector('ul');
